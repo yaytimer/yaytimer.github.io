@@ -8,7 +8,7 @@ $.fn.extend({
 });
 
 $(document).ready(function(){
-  Howler.mobileAutoEnable = false;
+  Howler.mobileAutoEnable = true;
   // var icon = $('.play');
   //  icon.click(function() {
   //     // $('.play').toggleClass('active');
