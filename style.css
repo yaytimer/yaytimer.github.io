@@ -60,20 +60,37 @@
 }
 
 #value_timer {
+  text-align:center;
   margin: 0 auto;
-  width: 250px;
+  width: 390px;
   height: 250px;
+  border: 1px solid black;
 }
 
-#square {
+/*#square {
   position: absolute;
   z-index: 3;
   width:100px;
   height: 100px;
   margin-top: 80px;
   margin-left: 80px;
-  /*border: 1px solid black;*/
+}*/
+
+#square {
+
+  font-size: 70px;
+  color: #d1d1d1;
+  position: absolute;
+  z-index: 3;
+  width:100px;
+  height: 100px;
+  margin-top: 80px;
+  margin-left: 80px;
+  border-radius: 50px;
+  display:none;
+  background-color: black;
 }
+
 
 #value {
   text-align: center;

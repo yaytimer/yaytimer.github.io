@@ -108,15 +108,14 @@ function testSound(){
     src: ['yay3.mp3']
   })
   sound.play()
-  // alert("hello")
 }
 
 function switchOnSound(){
+
   var sound = new Howl({
     src: ['something.mp3']
   })
   sound.play()
-  // alert("hello")
 }
 
 
@@ -135,14 +134,10 @@ function press() {
     if(window.running != true) {
       window.interval =  setInterval(changeNumber,1000)
       window.running = true
-      $('#square').animateCss("zoomIn");
-      $('#square').text("Start")
-      $('.play').toggleClass('active')
+      testAnmation()
     }
     else {
-      $('#square').animateCss("zoomIn");
-      $('#square').text("Pause")
-      stop()
+      testAnmation()
     }
 }
 
@@ -292,6 +287,13 @@ function setup() {
 
   step();
 
+}
+
+
+function testAnmation() {
+  $('#square').show()
+  $('#square').animateCss("zoomIn")
+  $('#square').fadeOut() //cannot ev
 }
 
 
