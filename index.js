@@ -8,12 +8,6 @@ $.fn.extend({
 });
 
 $(document).ready(function(){
-  Howler.mobileAutoEnable = false;
-  // var icon = $('.play');
-  //  icon.click(function() {
-  //     // $('.play').toggleClass('active');
-  //     return false;
-  //  });
 
   $("#jquery_jplayer_1").jPlayer({
     ready: function() {
@@ -111,7 +105,6 @@ function testSound(){
 }
 
 function switchOnSound(){
-
   var sound = new Howl({
     src: ['something.mp3']
   })
