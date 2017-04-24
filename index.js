@@ -8,7 +8,7 @@ $.fn.extend({
 });
 
 $(document).ready(function(){
-  // Howler.mobileAutoEnable = true;
+  Howler.mobileAutoEnable = false;
   // var icon = $('.play');
   //  icon.click(function() {
   //     // $('.play').toggleClass('active');
@@ -110,6 +110,15 @@ function testSound(){
   sound.play()
   // alert("hello")
 }
+
+function switchOnSound(){
+  var sound = new Howl({
+    src: ['yay3.mp3']
+  })
+  sound.play()
+  // alert("hello")
+}
+
 
 function restart() {
   document.getElementById("value").innerText = window.default
