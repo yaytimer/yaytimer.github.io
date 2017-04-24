@@ -113,7 +113,7 @@ function testSound(){
 
 function switchOnSound(){
   var sound = new Howl({
-    src: ['yay3.mp3']
+    src: ['something.mp3']
   })
   sound.play()
   // alert("hello")
