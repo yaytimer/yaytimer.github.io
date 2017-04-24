@@ -1,99 +1,40 @@
 $.fn.extend({
-    animateCss: function (animationName) {
-        var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-        this.addClass('animated ' + animationName).one(animationEnd, function() {
-            $(this).removeClass('animated ' + animationName);
-        });
-    }
-});
+  animateCss: function (animationName) {
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    this.addClass('animated ' + animationName).one(animationEnd, function() {
+        $(this).removeClass('animated ' + animationName);
+    })
+  }
+})
 
 $(document).ready(function(){
 
-  $("#jquery_jplayer_1").jPlayer({
-    ready: function() {
-      $(this).jPlayer("setMedia", {
-        mp3: "yay3.mp3"
-      }).jPlayer();
-      var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
-      var kickoff = function () {
-       //  alert(window.context)
-       //   window.context.clearRect(0, 0, window.canvas.width, window.canvas.height);
-        //stop the confetti
-       //  $("#jquery_jplayer_1").jPlayer("play");
-      };
-       document.documentElement.addEventListener(click, kickoff, true);
-    },
-    swfPath: "/js"
-  })
+  // $("#jquery_jplayer_1").jPlayer({
+  //   ready: function() {
+  //     $(this).jPlayer("setMedia", {
+  //       mp3: "yay3.mp3"
+  //     }).jPlayer()
+  //     var click = document.ontouchstart === undefined ? 'click' : 'touchstart';
+  //     var kickoff = function () {
+  //      //  alert(window.context)
+  //      //   window.context.clearRect(0, 0, window.canvas.width, window.canvas.height);
+  //       //stop the confetti
+  //      //  $("#jquery_jplayer_1").jPlayer("play");
+  //     };
+  //      document.documentElement.addEventListener(click, kickoff, true);
+  //   },
+  //   swfPath: "/js"
+  // })
 })
 
 
 function changeBackground() {
+  var colours = ["#0099e5","#0079c1","#6a67ce","#4d4f53","#34bf49",
+                  "#3b5998","#33cc99","#ce1126","#075aaa","#59626a",
+                "#00a0f0","#ed1c24","#b4a996","#537b35","#56a0d3",
+                "#990033","#f65a5b", "#5482ab", "#97824b", "#7289da"]
   window.random = Math.floor((Math.random() * 20) + 1);
-  switch(window.random) {
-    case 1:
-     window.color = "#0099e5"
-     break;
-   case 2:
-     window.color = "#0079c1"
-     break;
-   case 3:
-     window.color = "#6a67ce"
-     break;
-   case 4:
-      window.color = "#4d4f53"
-      break;
-   case 5:
-      window.color = "#34bf49"
-      break;
-   case 6:
-      window.color = "#3b5998"
-      break;
-   case 7:
-     window.color = "#33cc99"
-     break;
-   case 8:
-      window.color = "#ce1126"
-      break;
-   case 9:
-       window.color = "#075aaa"
-       break;
-   case 10:
-      window.color = "#59626a"
-      break;
-   case 11:
-     window.color = "#00a0f0"
-     break;
-   case 12:
-     window.color = "#ed1c24"
-     break;
-   case 13:
-     window.color = "#b4a996"
-     break;
-   case 14:
-     window.color = "#537b35"
-     break;
-   case 15:
-     window.color = "#56a0d3"
-     break;
-   case 16:
-     window.color = "#990033"
-     break;
-   case 17:
-     window.color = "#f65a5b"
-     break;
-   case 18:
-     window.color = "#5482ab"
-     break;
-   case 19:
-     window.color = "#97824b"
-     break;
-   case 20:
-     window.color = "#7289da"
-     break;
-  }
-   document.body.style.background = window.color
-
+   document.body.style.background = colours[window.random]
    $(".play.active:after").attr("box-shadow","inset 30px 0 0 0" + window.color)
 }
 
@@ -131,6 +72,7 @@ function press() {
     }
     else {
       testAnmation()
+      stop()
     }
 }
 
@@ -145,7 +87,7 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  testSound()
+  // testSound()
 }
 
 
@@ -278,7 +220,7 @@ function setup() {
     return results;
   };
 
-  step();
+  step()
 
 }
 
