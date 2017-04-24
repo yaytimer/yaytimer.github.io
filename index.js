@@ -8,11 +8,12 @@ $.fn.extend({
 });
 
 $(document).ready(function(){
-  var icon = $('.play');
-   icon.click(function() {
-      // $('.play').toggleClass('active');
-      return false;
-   });
+  Howler.mobileAutoEnable = false;
+  // var icon = $('.play');
+  //  icon.click(function() {
+  //     // $('.play').toggleClass('active');
+  //     return false;
+  //  });
 
   $("#jquery_jplayer_1").jPlayer({
     ready: function() {
@@ -147,7 +148,6 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  // $('#square').text("restart")
   testSound()
 }
 
