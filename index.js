@@ -105,8 +105,9 @@ function changeBackground() {
 function testSound(){
   var sound = new Howl({
     src: ['yay3.mp3']
-  });
-  sound.play();
+  })
+  sound.play()
+  alert("hello")
 }
 
 function restart() {
