@@ -105,6 +105,7 @@ function changeBackground() {
 }
 
 function testSound(){
+  //super it works, TODO: get rid of all the audio shits that are non-howler
   var sound = new Howl({
     src: ['yay3.mp3']
   });
@@ -131,7 +132,6 @@ function press() {
       $('.play').toggleClass('active')
     }
     else {
-
       $('#square').animateCss("zoomIn");
       $('#square').text("Pause")
       stop()
@@ -149,8 +149,9 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  $('.play').toggleClass('active')
+  // $('.play').toggleClass('active')
   $('#square').text("restart")
+  testSound()
 }
 
 
