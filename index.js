@@ -1,3 +1,5 @@
+
+
 $.fn.extend({
     animateCss: function (animationName) {
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -8,7 +10,6 @@ $.fn.extend({
 });
 
 $(document).ready(function(){
-
   var icon = $('.play');
    icon.click(function() {
       // $('.play').toggleClass('active');
@@ -101,6 +102,13 @@ function changeBackground() {
    document.body.style.background = window.color
 
    $(".play.active:after").attr("box-shadow","inset 30px 0 0 0" + window.color)
+}
+
+function testSound(){
+  var sound = new Howl({
+    src: ['yay3.mp3']
+  });
+  sound.play();
 }
 
 function restart() {
