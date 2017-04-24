@@ -1,5 +1,3 @@
-
-
 $.fn.extend({
     animateCss: function (animationName) {
         var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
@@ -105,7 +103,6 @@ function changeBackground() {
 }
 
 function testSound(){
-  //super it works, TODO: get rid of all the audio shits that are non-howler
   var sound = new Howl({
     src: ['yay3.mp3']
   });
@@ -149,8 +146,7 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  // $('.play').toggleClass('active')
-  $('#square').text("restart")
+  // $('#square').text("restart")
   testSound()
 }
 
