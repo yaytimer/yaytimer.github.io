@@ -10,8 +10,8 @@ $.fn.extend({
 function changeBackground() {
   var colours = ["#0099e5","#0079c1","#6a67ce","#4d4f53","#34bf49",
                   "#3b5998","#33cc99","#ce1126","#075aaa","#59626a",
-                "#00a0f0","#ed1c24","#b4a996","#537b35","#56a0d3",
-                "#990033","#f65a5b", "#5482ab", "#97824b", "#7289da"]
+                "#00a0f0","#ed1c24","#009966","#097054","#56a0d3",
+                "#003366","#f65a5b", "#5482ab", "#336699", "#7289da"]
   window.random = Math.floor((Math.random() * 20) + 1);
    document.body.style.background = colours[window.random - 1]
   //  $(".play.active:after").attr("box-shadow","inset 30px 0 0 0" + window.color)
