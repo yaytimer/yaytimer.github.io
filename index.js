@@ -7,6 +7,10 @@ $.fn.extend({
   }
 })
 
+// $( document ).ready(function() {
+//   $('#half').css('left', window.innerWidth/2 - 10)
+// })
+
 function changeBackground() {
   var colours = ["#0099e5","#0079c1","#6a67ce","#4d4f53","#34bf49",
                   "#3b5998","#33cc99","#ce1126","#075aaa","#59626a",
@@ -202,6 +206,9 @@ function showConfetti(){
 }
 
 function testAnmation() {
+  // $('#half').css('left', window.screen.width/2 - 20)
+
+  $('#square').css('left', window.innerWidth/2 - 50 )
   $('#square').show()
   $('#square').animateCss("zoomIn")
   $('#square').fadeOut() //cannot ev
