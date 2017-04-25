@@ -77,8 +77,9 @@
 }*/
 
 #square {
-
-  font-size: 50px;
+  /*border-radius: 50px;*/
+  display:none;
+  font-size: 40px;
   color: #d1d1d1;
   position: absolute;
   z-index: 3;
@@ -86,9 +87,17 @@
   height: 100px;
   margin-top: 80px;
   margin-left: 80px;
-  border-radius: 50px;
-  display:none;
   background-color: black;
+
+  /*display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;*/
 }
 
 
