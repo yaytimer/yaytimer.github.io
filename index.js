@@ -13,8 +13,7 @@ function changeBackground() {
                 "#00a0f0","#ed1c24","#009966","#097054","#56a0d3",
                 "#003366","#f65a5b", "#5482ab", "#336699", "#7289da"]
   window.random = Math.floor((Math.random() * 20) + 1);
-   document.body.style.background = colours[window.random - 1]
-  //  $(".play.active:after").attr("box-shadow","inset 30px 0 0 0" + window.color)
+  document.body.style.background = colours[window.random - 1]
 }
 
 function testSound(){
@@ -81,20 +80,7 @@ function changeNumber() {
   }
 }
 
-function showConfetti(){
-  canvas = document.getElementById("world");
-  window.canvas = canvas
-  context = canvas.getContext("2d");
-  window.context = context
-  window.w = 0;
-  window.h = 0;
-  resizeWindow = function() {
-    window.w = canvas.width = window.innerWidth;
-    return window.h = canvas.height = window.innerHeight;
-  };
-    setup()
-    setTimeout(resizeWindow, 0)
-}
+
 
 function setup() {
   var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
@@ -198,6 +184,21 @@ function setup() {
   };
 
   step()
+}
+
+function showConfetti(){
+  canvas = document.getElementById("world");
+  window.canvas = canvas
+  context = canvas.getContext("2d");
+  window.context = context
+  window.w = 0;
+  window.h = 0;
+  resizeWindow = function() {
+    window.w = canvas.width = window.innerWidth;
+    return window.h = canvas.height = window.innerHeight;
+  };
+    setup()
+    setTimeout(resizeWindow, 0)
 }
 
 function testAnmation() {
