@@ -84,18 +84,14 @@ function changeNumber() {
 function showConfetti(){
   canvas = document.getElementById("world");
   window.canvas = canvas
-
   context = canvas.getContext("2d");
   window.context = context
-
   window.w = 0;
   window.h = 0;
-
   resizeWindow = function() {
     window.w = canvas.width = window.innerWidth;
     return window.h = canvas.height = window.innerHeight;
   };
-
     setup()
     setTimeout(resizeWindow, 0)
 }
@@ -202,16 +198,13 @@ function setup() {
   };
 
   step()
-
 }
-
 
 function testAnmation() {
   $('#square').show()
   $('#square').animateCss("zoomIn")
   $('#square').fadeOut() //cannot ev
 }
-
 
 function refresh() {
   var answer = window.confirm("Are you sure you want to restart?")
