@@ -229,15 +229,3 @@ html, body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-
-/*@media screen and (orientation:landscape) {
-  #container {
-    -ms-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-    width: 375px;
-    height: 667px;
-    overflow: scroll;
-  }
-}*/
