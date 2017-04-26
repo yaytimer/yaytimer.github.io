@@ -21,10 +21,12 @@ function changeBackground() {
 }
 
 function testSound(){
-  var sound = new Howl({
-    src: ['yay3.mp3']
-  })
-  sound.play()
+  if(window.sound == null) {
+    window.sound = new Howl({
+      src: ['yay3.mp3']
+    })
+  }
+  window.sound.play()
 }
 
 function switchOnSound(){
@@ -33,10 +35,13 @@ function switchOnSound(){
     $('#volume').addClass('fa-volume-up')
     $('#volume').removeClass('fa-volume-off')
     $('#sound').text("Sound on")
-    var sound = new Howl({
-      src: ['yay3.mp3']
-    })
-    sound.play()
+
+    if(window.sound == null) {
+      window.sound = new Howl({
+        src: ['yay3.mp3']
+      })
+    }
+    window.sound.play()
 
   } else {
     console.log("Sound is on")
@@ -84,7 +89,7 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  // testSound()
+  testSound()
 }
 
 function changeNumber() {
