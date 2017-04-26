@@ -12,13 +12,17 @@ function doOnOrientationChange() {
 
     switch(window.orientation) {
       case -90:
-        alert('landscape' + window.orientation);
+        // 
+        // alert('landscape' + window.orientation);
+        //set the view
         break;
       case 90:
-        alert('landscape' + window.orientation);
+        //
+        // set the view
+        // alert('landscape' + window.orientation);
         break;
       default:
-        alert('portrait'+ window.orientation);
+        // alert('portrait'+ window.orientation);
         break;
     }
 }
