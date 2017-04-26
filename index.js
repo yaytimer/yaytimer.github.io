@@ -1,8 +1,8 @@
 $.fn.extend({
   animateCss: function (animationName) {
-    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend'
     this.addClass('animated ' + animationName).one(animationEnd, function() {
-        $(this).removeClass('animated ' + animationName);
+        $(this).removeClass('animated ' + animationName)
     })
   }
 })
@@ -10,20 +10,20 @@ $.fn.extend({
 function doOnOrientationChange() {
     switch(window.orientation) {
       case -90:
-        // alert('landscape' + window.orientation);
+        // alert('landscape' + window.orientation)
         //set the view
-        break;
+        break
       case 90:
         // set the view
-        // alert('landscape' + window.orientation);
-        break;
+        // alert('landscape' + window.orientation)
+        break
       default:
-        // alert('portrait'+ window.orientation);
-        break;
+        // alert('portrait'+ window.orientation)
+        break
     }
 }
 
-window.addEventListener('orientationchange', doOnOrientationChange);
+window.addEventListener('orientationchange', doOnOrientationChange)
 
 
 function changeBackground() {
@@ -31,7 +31,7 @@ function changeBackground() {
                   "#3b5998","#33cc99","#ce1126","#075aaa","#59626a",
                 "#00a0f0","#ed1c24","#009966","#097054","#56a0d3",
                 "#003366","#f65a5b", "#5482ab", "#336699", "#7289da"]
-  window.random = Math.floor((Math.random() * 20) + 1);
+  window.random = Math.floor((Math.random() * 20) + 1)
   document.body.style.background = colours[window.random - 1]
   $('#version').css('color',colours[window.random - 1])
 }
@@ -52,9 +52,7 @@ function switchOnSound(){
       src: ['yay3.mp3']
     })
     sound.play()
-
   } else {
-
     $('#volume').addClass('fa-volume-off')
     $('#volume').removeClass('fa-volume-up')
     $('#sound').text("Sound off")
@@ -70,7 +68,7 @@ function setTiming(timing) {
   window.default = timing
   document.getElementById("value").innerText = timing
   stop()
-  $(".navbar-toggle").trigger( "click" ) //only trigger on mobile
+  $(".navbar-toggle").trigger("click") //only trigger on mobile
 }
 
 function press() {
@@ -94,7 +92,7 @@ function countDown(){
   if(window.running != true) {
     window.interval =  setInterval(changeNumber,1000)
   }
-   window.running = true
+  window.running = true
 }
 
 function stop(){
@@ -110,6 +108,23 @@ function changeNumber() {
     testSound()
   }
 }
+
+
+function testAnmation() {
+  $('#square').css('left', window.innerWidth/2 - 50 )
+  $('#square').show()
+  $('#square').animateCss("zoomIn")
+  $('#square').fadeOut() //cannot ev
+}
+
+function refresh() {
+  var answer = window.confirm("Are you sure you want to restart?")
+  if(answer == true) {
+    changeBackground()
+    restart()
+  }
+}
+
 
 function setup() {
   var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
@@ -211,7 +226,6 @@ function setup() {
     }
     return results;
   };
-
   step()
 }
 
@@ -226,27 +240,14 @@ function showConfetti(){
     window.w = canvas.width = window.innerWidth;
     return window.h = canvas.height = window.innerHeight;
   };
-    setup()
-    setTimeout(resizeWindow, 0)
+  setup()
+  setTimeout(resizeWindow, 0)
 }
 
-function testAnmation() {
-  $('#square').css('left', window.innerWidth/2 - 50 )
-  $('#square').show()
-  $('#square').animateCss("zoomIn")
-  $('#square').fadeOut() //cannot ev
-}
-
-function refresh() {
-  var answer = window.confirm("Are you sure you want to restart?")
-  if(answer == true) {
-    changeBackground()
-    restart()
-  }
-}
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  window.default = 30
+  window.default = 5
   changeBackground()
   $('#version').text('0.7')
+  $('#value').text(window.default)
 })
