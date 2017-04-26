@@ -231,13 +231,13 @@ html, body {
 }
 
 
-@media screen and (orientation:landscape) {
+/*@media screen and (orientation:landscape) {
   #container {
-    -ms-transform: rotate(-90deg); /* IE 9 */
-    -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
+    -ms-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
     transform: rotate(-90deg);
     width: 375px;
     height: 667px;
     overflow: scroll;
   }
-}
+}*/
