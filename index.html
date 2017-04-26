@@ -51,11 +51,7 @@
   </nav>
 
   <div class="container">
-
     <div onclick="press()" id="value_timer">
-      <!-- <div id="half">
-
-      </div> -->
       <div id="square" >
           <i id="icon" class="fa fa-play" aria-hidden="true"></i>
       </div>
@@ -67,7 +63,12 @@
     <br>
     <br>
 
-    <a onclick="switchOnSound();" href="#">Sound off</a>
+    <span class="white">
+      <i id="volume" class="fa fa-volume-off" aria-hidden="true"></i>
+      <a id="sound" class="white" onclick="switchOnSound();" href="#">Sound off</a>
+    </span>
+
+    <a class="white space_left" onclick="restart();" href="#"><i class="fa fa-refresh" aria-hidden="true"></i> Restart</a>
 
   </div>
 </body>

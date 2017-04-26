@@ -28,10 +28,22 @@ function testSound(){
 }
 
 function switchOnSound(){
-  var sound = new Howl({
-    src: ['something.mp3']
-  })
-  sound.play()
+  if ($('#sound').text() == "Sound off") {
+    console.log("Sound is off")
+    $('#volume').addClass('fa-volume-up')
+    $('#volume').removeClass('fa-volume-off')
+    $('#sound').text("Sound on")
+    var sound = new Howl({
+      src: ['yay3.mp3']
+    })
+    sound.play()
+
+  } else {
+    console.log("Sound is on")
+    $('#volume').addClass('fa-volume-off')
+    $('#volume').removeClass('fa-volume-up')
+    $('#sound').text("Sound off")
+  }
 }
 
 function restart() {
@@ -75,7 +87,6 @@ function stop(){
   // testSound()
 }
 
-
 function changeNumber() {
   if (document.getElementById("value").innerText != "0") {
     document.getElementById("value").innerText = document.getElementById("value").innerText - 1
@@ -83,8 +94,6 @@ function changeNumber() {
     stop()
   }
 }
-
-
 
 function setup() {
   var COLORS, Confetti, NUM_CONFETTI, PI_2, canvas, confetti, context, drawCircle, i, range, resizeWindow, xpos;
@@ -206,8 +215,6 @@ function showConfetti(){
 }
 
 function testAnmation() {
-  // $('#half').css('left', window.screen.width/2 - 20)
-
   $('#square').css('left', window.innerWidth/2 - 50 )
   $('#square').show()
   $('#square').animateCss("zoomIn")
