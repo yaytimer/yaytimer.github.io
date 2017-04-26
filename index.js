@@ -21,12 +21,6 @@ function changeBackground() {
 }
 
 function testSound(){
-  // if(window.sound == undefined) {
-  //
-  // } else {
-  //   var sound = window.sound
-  // }
-
   var sound = new Howl({
     src: ['yay3.mp3']
   })
@@ -35,26 +29,18 @@ function testSound(){
 
 function switchOnSound(){
   if ($('#sound').text() == "Sound off") {
-    console.log("Sound is off")
+
     $('#volume').addClass('fa-volume-up')
     $('#volume').removeClass('fa-volume-off')
     $('#sound').text("Sound on")
 
-    // if(window.sound == undefined) {
-    //   window.sound = new Howl({
-    //     src: ['yay3.mp3']
-    //   })
-    // } else {
-    //   var sound = window.sound
-    // }
-    // sound.play()
     var sound = new Howl({
       src: ['yay3.mp3']
     })
     sound.play()
 
   } else {
-    console.log("Sound is on")
+
     $('#volume').addClass('fa-volume-off')
     $('#volume').removeClass('fa-volume-up')
     $('#sound').text("Sound off")
