@@ -7,6 +7,20 @@ $.fn.extend({
   }
 })
 
+
+function doOnOrientationChange() {
+    switch(window.orientation) {
+      case -90 || 90:
+        alert('landscape');
+        break;
+      default:
+        alert('portrait');
+        break;
+    }
+}
+
+window.addEventListener('orientationchange', doOnOrientationChange);
+
 // $( document ).ready(function() {
 //   $('#half').css('left', window.innerWidth/2 - 10)
 // })
