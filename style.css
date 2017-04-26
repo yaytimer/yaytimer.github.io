@@ -236,8 +236,8 @@ html, body {
     -ms-transform: rotate(-90deg); /* IE 9 */
     -webkit-transform: rotate(-90deg); /* Chrome, Safari, Opera */
     transform: rotate(-90deg);
-    width: 750px;
-    height: 1334px;
+    width: 375px;
+    height: 667px;
     overflow: scroll;
   }
 }
