@@ -56,6 +56,7 @@ function setTiming(timing) {
   window.default = timing
   document.getElementById("value").innerText = timing
   stop()
+  $(".navbar-toggle").trigger( "click" ) //only trigger on mobile
 }
 
 function press() {
@@ -85,7 +86,6 @@ function countDown(){
 function stop(){
   clearInterval(window.interval)
   window.running = false
-  testSound()
 }
 
 function changeNumber() {
@@ -93,6 +93,7 @@ function changeNumber() {
     document.getElementById("value").innerText = document.getElementById("value").innerText - 1
   } else {
     stop()
+    testSound()
   }
 }
 
