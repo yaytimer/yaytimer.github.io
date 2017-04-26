@@ -7,17 +7,13 @@ $.fn.extend({
   }
 })
 
-
 function doOnOrientationChange() {
-
     switch(window.orientation) {
       case -90:
-        // 
         // alert('landscape' + window.orientation);
         //set the view
         break;
       case 90:
-        //
         // set the view
         // alert('landscape' + window.orientation);
         break;
@@ -29,9 +25,6 @@ function doOnOrientationChange() {
 
 window.addEventListener('orientationchange', doOnOrientationChange);
 
-// $( document ).ready(function() {
-//   $('#half').css('left', window.innerWidth/2 - 10)
-// })
 
 function changeBackground() {
   var colours = ["#0099e5","#0079c1","#6a67ce","#4d4f53","#34bf49",
@@ -40,6 +33,7 @@ function changeBackground() {
                 "#003366","#f65a5b", "#5482ab", "#336699", "#7289da"]
   window.random = Math.floor((Math.random() * 20) + 1);
   document.body.style.background = colours[window.random - 1]
+  $('#version').css('color',colours[window.random - 1])
 }
 
 function testSound(){
@@ -256,4 +250,5 @@ function refresh() {
 document.addEventListener("DOMContentLoaded", function(event) {
   window.default = 30
   changeBackground()
+  $('#version').text('0.7')
 })

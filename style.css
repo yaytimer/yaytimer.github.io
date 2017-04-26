@@ -2,6 +2,11 @@
     margin-left: 20px;
 }
 
+#version {
+  position: absolute;
+  bottom: 0;
+  left: 5;
+}
 .navbar-left {
   float: left;
   margin-left: 5px;
