@@ -11,7 +11,10 @@ $.fn.extend({
 function doOnOrientationChange() {
 
     switch(window.orientation) {
-      case -90 || 90:
+      case -90:
+        alert('landscape' + window.orientation);
+        break;
+      case 90:
         alert('landscape' + window.orientation);
         break;
       default:
