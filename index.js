@@ -40,7 +40,9 @@ function testSound(){
   var sound = new Howl({
     src: ['yay3.mp3']
   })
-  sound.play()
+  if(window.sound == true) {
+    sound.play()
+  }
 }
 
 function switchOnSound(){
@@ -51,11 +53,16 @@ function switchOnSound(){
     var sound = new Howl({
       src: ['yay3.mp3']
     })
-    sound.play()
+    if(window.sound == true) {
+      sound.play()
+    }
+    window.sound = true
   } else {
     $('#volume').addClass('fa-volume-off')
     $('#volume').removeClass('fa-volume-up')
     $('#sound').text("Sound off")
+    window.sound = false
+
   }
 }
 
@@ -65,6 +72,7 @@ function restart() {
 }
 
 function setTiming(timing) {
+  localStorage.setItem("default", timing)
   window.default = timing
   document.getElementById("value").innerText = timing
   stop()
@@ -246,7 +254,13 @@ function showConfetti(){
 
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  window.default = 5
+  window.sound = false
+  if(localStorage.getItem("default") != undefined){
+    window.default = localStorage.getItem("default")
+  } else {
+    window.default = 5
+    localStorage.setItem("default", 5)
+  }
   changeBackground()
   $('#version').text('0.7')
   $('#value').text(window.default)
