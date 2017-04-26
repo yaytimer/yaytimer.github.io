@@ -9,12 +9,13 @@ $.fn.extend({
 
 
 function doOnOrientationChange() {
+
     switch(window.orientation) {
       case -90 || 90:
-        alert('landscape');
+        alert('landscape' + window.orientation);
         break;
       default:
-        alert('portrait');
+        alert('portrait'+ window.orientation);
         break;
     }
 }
