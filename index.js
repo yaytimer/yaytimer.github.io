@@ -45,11 +45,9 @@ function testSound(){
 
 function switchOnSound(){
   if ($('#sound').text() == "Sound off") {
-
     $('#volume').addClass('fa-volume-up')
     $('#volume').removeClass('fa-volume-off')
     $('#sound').text("Sound on")
-
     var sound = new Howl({
       src: ['yay3.mp3']
     })
