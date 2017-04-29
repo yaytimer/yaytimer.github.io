@@ -25,7 +25,7 @@
 }
 
 
-.play {
+/*.play {
   display: block;
   width: 0;
   height: 0;
@@ -80,7 +80,7 @@
   top: -40px;
   border-left: 20px solid #2c3e50;
   box-shadow: inset 30px 0 0 0 #f9f9f9;
-}
+}*/
 
 .fa-6 {
   font-size: 7em;
@@ -234,3 +234,15 @@ html, body {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
+canvas {
+  /*width: 100px;
+  height: 100px;*/
+  position: absolute;
+  z-index: 0;
+}
+
+/*.front {
+  position: absolute;
+  z-index: 1;
+}*/

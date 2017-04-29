@@ -10,12 +10,15 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script> -->
+  <script src="ocanvas.min.js"></script>
+  <script src="index.js"></script>
+
 
 </head>
 
 <body>
+  <canvas id="canvas"></canvas>
 
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
@@ -48,7 +51,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="front container">
     <div onclick="press()" id="value_timer">
       <div id="square" >
           <i id="icon" class="fa fa-play" aria-hidden="true"></i>
@@ -67,12 +70,16 @@
     </span>
 
     <a class="white space_left" onclick="restart();" href="#"><i class="fa fa-refresh" aria-hidden="true"></i> Restart</a>
+
+    <!-- <a class="white space_left" onclick="showC();"><i class="fa fa-refresh"
+      aria-hidden="true"></i> test</a> -->
+
     <br>
     <br>
     <br>
     <br>
     <a class="white" href="http://www.edenschool.edu.sg">Sponsored by Eden School</a>
-    <p id="version">0.1</p>
+    <p id="version"></p>
 
   </div>
 
