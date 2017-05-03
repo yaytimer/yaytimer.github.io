@@ -46,6 +46,11 @@ function testSound(){
   }
 }
 
+function about() {
+  msg ="Yaytimer is an internet timer created for special needs children."
+  alert(msg)
+}
+
 function switchOnSound(){
   if ($('#sound').text() == "Sound off") {
     $('#volume').addClass('fa-volume-up')
