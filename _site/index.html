@@ -1,0 +1,96 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script> -->
+  <script src="ocanvas.min.js"></script>
+  <script src="index.js"></script>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+      google_ad_client: "ca-pub-1856701630896694",
+      enable_page_level_ads: true
+    });
+  </script>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle navbar-left" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Yay Timer</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a onclick="setTiming(5);">5s</a></li>
+          <li><a onclick="setTiming(10);">10s</a></li>
+          <li><a onclick="setTiming(15);">15s</a></li>
+          <li><a onclick="setTiming(20);">20s</a></li>
+          <li><a onclick="setTiming(25);">25s</a></li>
+          <li><a onclick="setTiming(30);">30s</a></li>
+          <li><a onclick="setTiming(45);">45s</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="" onclick="about()">About</a></li>
+
+          <li><a href="mailto:ytbryan@gmail.com">Email us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="front container">
+    <div onclick="press()" id="value_timer">
+      <div id="square" >
+          <i id="icon" class="fa fa-play" aria-hidden="true"></i>
+      </div>
+      <div id="value" class="white"></div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <span class="white">
+      <i id="volume" class="fa fa-volume-off" aria-hidden="true"></i>
+      <a id="sound" class="white" onclick="switchOnSound();" href="#">Sound off</a>
+    </span>
+
+    <a class="white space_left" onclick="restart();" href="#"><i class="fa fa-refresh" aria-hidden="true"></i> Restart</a>
+
+    <!-- <a class="white space_left" onclick="showC();"><i class="fa fa-refresh"
+      aria-hidden="true"></i> test</a> -->
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <a class="white" href="http://www.edenschool.edu.sg">Sponsored by Eden School</a>
+    <p id="version"></p>
+
+  </div>
+
+
+
+
+
+</body>
