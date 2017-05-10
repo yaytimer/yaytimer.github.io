@@ -10,7 +10,9 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script> -->
+
+  <!-- <link rel="stylesheet" href="circle.css"> -->
+
   <script src="ocanvas.min.js"></script>
   <script src="index.js"></script>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -34,7 +36,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Yay Timer</a>
+        <a class="navbar-brand">Yay Timer</a>
       </div>
 
       <div class="collapse navbar-collapse" id="myNavbar">
@@ -49,7 +51,7 @@
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="" onclick="about()">About</a></li>
+          <li><a onclick="about()">About</a></li>
 
           <li><a href="mailto:askyaytimer@gmail.com">Email us</a></li>
         </ul>
@@ -59,10 +61,13 @@
 
   <div class="front container">
     <div onclick="press()" id="value_timer">
+
       <div id="square" >
           <i id="icon" class="fa fa-play" aria-hidden="true"></i>
       </div>
+
       <div id="value" class="white"></div>
+
     </div>
 
     <br>
@@ -72,10 +77,10 @@
 
     <span class="white">
       <i id="volume" class="fa fa-volume-off" aria-hidden="true"></i>
-      <a id="sound" class="white" onclick="switchOnSound();" href="#">Sound off</a>
+      <a id="sound" class="white" onclick="switchOnSound();">Sound off</a>
     </span>
 
-    <a class="white space_left" onclick="restart();" href="#"><i class="fa fa-refresh" aria-hidden="true"></i> Restart</a>
+    <a class="white space_left" onclick="restart();"><i class="fa fa-refresh" aria-hidden="true"></i> Restart</a>
 
     <!-- <a class="white space_left" onclick="showC();"><i class="fa fa-refresh"
       aria-hidden="true"></i> test</a> -->
